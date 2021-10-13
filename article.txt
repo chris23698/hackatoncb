@@ -1,0 +1,170 @@
+CSS Basics: The Second “S” in CSS - Heading
+Geoff Graham on Feb 14, 2018 (Updated on Feb 21, 2018)
+
+CSS is an abbreviation for Cascading Style Sheets.
+
+While most of the discussion about CSS on the web (or even here on CSS-Tricks) is centered around writing styles and how the cascade affects them, what we don’t talk a whole lot about is the sheet part of the language. So let’s give that lonely second “S” a little bit of the spotlight and understand what we mean when we say CSS is a style sheet.
+
+The Sheet Contains the Styles - Heading
+The cascade describes how styles interact with one another. The styles make up the actual code. Then there’s the sheet that contains that code. Like a sheet of paper that we write on, the “sheet” of CSS is the digital file where styles are coded.
+
+If we were to illustrate this, the relationship between the three sort of forms a cascade:
+
+img1 HERE
+
+There can be multiple sheets all continuing multiple styles all associated with one HTML document. The combination of those and the processes of figuring out what styles take precedence to style what elements is called the cascade (That first “C” in CSS).
+
+The Sheet is a Digital File - Heading
+
+The sheet is such a special thing that it’s been given its own file extension: .css. You have the power to create these files on your own. Creating a CSS file can be done in any text editor. They are literally text files. Not “rich text” documents or Word documents, but plain ol’ text.
+
+If you’re on Mac, then you can fire up TextEdit to start writing CSS. Just make sure it’s in “Plain Text” mode.
+
+img2 HERE
+
+If you’re on Windows, the default Notepad app is the equivalent. Heck, you can type styles in just about any plain text editor to write CSS, even if that’s not what it says it was designed to do.
+
+Whatever tool you use, the key is to save your document as a .css file. This can usually be done by simply add that to your file name when saving. Here’s how that looks in TextEdit:
+
+img3 HERE
+
+Seriously, the choice of which text editor to use for writing CSS is totally up to you. There are many, many to choose from, but here are a few popular ones:
+
+- Sublime Text
+- Atom
+- VIM
+- PhpStorm
+- Coda
+- Dreamweaver
+
+You might reach for one of those because they’ll do handy things for you like syntax highlight the code (colorize different parts to help it be easier to understand what is what).
+
+Hey look I made some files completely from scratch with my text editor:
+
+img4 HERE
+
+Those files are 100% valid in any web browser, new or old. We’ve quite literally just made a website.
+
+The Sheet is Linked Up to the HTML
+
+We do need to connect the HTML and CSS though. As in make sure the styles we wrote in our sheet get loaded onto the web page.
+
+A webpage without CSS is pretty barebones:
+
+iframe HERE
+
+Once we link up the CSS file, voila!
+
+iframe HERE
+<iframe height="300" style="width: 100%;" scrolling="no" title="Style-less Webpage" src="https://codepen.io/geoffgraham/embed/oEBybR?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/geoffgraham/pen/oEBybR">
+  Style-less Webpage</a> by Geoff Graham (<a href="https://codepen.io/geoffgraham">@geoffgraham</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+How did that happen? if you look at the top of any webpage, there’s going to be a <head> tag that contains information about the HTML document:
+
+CODE
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- a bunch of other stuff -->
+	</head>
+
+	<body>
+		<!-- the page content -->
+	</body>
+
+</html>
+CODE
+
+Even though the code inside the <head> might look odd, there is typically one line (or more, if we’re using multiple stylesheets) that references the sheet. It looks something like this:
+
+CODE
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+CODE
+
+
+This line tells the web browser as it reads this HTML file:
+
+I’d like to link up a style sheet
+1. Here’s where it is located
+2. You can name the sheet whatever you want:
+
+- styles.css
+- global.css
+- seriously-whatever-you-want.css
+
+The important thing is to give the correct location of the CSS file, whether that’s on your web server, a CDN or some other server altogether.
+
+Here are a few examples:
+CODE
+<head>
+  <!-- CSS on my server in the top level directory -->
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+  <!-- CSS on my server in another directory -->
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+  <!-- CSS on another server -->
+  <link rel="stylesheet" type="text/css" href="https://some-other-site/path/to/styles.css">
+</head>
+CODE
+
+The Sheet is Not Required for HTML - Heading
+
+You saw the example of a barebones web page above. No web page is required to use a stylesheet.
+
+Also, we can technically write CSS directly in the HTML using the HTML style attribute. This is called inline styling and it goes a little something like this if you imagine you’re looking at the code of an HTML file:
+
+CODE
+<h1 style="font-size: 24px; line-height: 36px; color: #333333">A Headline</h1>
+<p style="font-size: 16px; line-height: 24px; color: #000000;">Some paragraph content.</p>
+<!-- and so on -->
+CODE
+
+While that’s possible, there are three serious strikes against writing styles this way: - HEADING
+
+If you decide to use a stylesheet later, it is extremely difficult to override inline styles with the styles in the HTML. Inline styles take priority over styles in a sheet.
+Maintaining all of those styles is tough if you need to make a “quick” change and it makes the HTML hard to read.
+There’s something weird about saying we’re writing CSS inline when there really is no cascade or sheet. All we’re really writing are styles.
+There is a second way to write CSS in the HTML and that’s directly in the <head> in a <style> block:
+
+CODE
+<head>
+	<style>
+  	h1 {
+  		color: #333;
+  		font-size: 24px;
+  		line-height: 36px;
+  	}
+
+  	p {
+  		color: #000;
+  		font-size: 16px;
+  		line-height: 24px;
+  	}
+	</style>
+</head>
+CODE
+
+That does indeed make the HTML easier to read, already making it better than inline styling. Still, it’s hard to manage all styles this way because it has to be managed on each and every webpage of a site, meaning one “quick” change might have to be done several times, depending on how many pages we’re dealing with.
+
+An external sheet that can be called once in the <head> is usually your best bet.
+
+The Sheet is Important - HEADING
+I hope that you’re starting to see the importance of the sheet by this point. It’s a core part of writing CSS. Without it, styles would be difficult to manage, HTML would get cluttered, and the cascade would be nonexistent in at least one case.
+
+The sheet is the core component of CSS. Sure, it often appears to play second fiddle to the first “S” but perhaps that’s because we all have an quiet understanding of its importance.
+
+Leveling Up - HEADING
+Now that you’re equipped with information about stylesheets, here are more resources you jump into to get a deeper understanding for how CSS behaves:
+
+Specifics on Specificity – The cascade is a confusing concept and this article breaks down the concept of specificity, which is a method for how to manage it.
+The latest ways to deal with the cascade, inheritance and specificity – That’s a lot of words, but the this article provides pro tips on how to manage the cascade, including some ideas that may be possible in the future.
+Override Inline Styles with CSS – This is an oldie, but goodie. While the technique is probably not best practice today, it’s a good illustration of how to override those inline styles we mentioned earlier.
+When Using !important is The Right Choice – This article is a perfect call-and-response to the previous article about why that method may not be best practice.
+
+credit: https://css-tricks.com/css-basics-second-s-css/

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://www.noroff.no//images/logo/favicon.png"
+      rel="shortcut icon"
+      type="image/vnd.microsoft.icon"
+    />
+    <title>Article page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Akronim&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="inner">
+        <a href="/" class="app-logo">
+          <img src="./img/logo.png" alt="CSS Tricks" />
+        </a>
+        <nav class="app-navigation">
+          <label for="hamburger-menu">
+            <span class="sr-only">Hamburger Menu</span>
+            <i class="fas fa-bars"></i>
+          </label>
+          <input id="hamburger-menu" type="checkbox" />
+          <ul class="app-navigation-drawer">
+            <li>
+              <a href="/">
+                <i class="fas fa-home color-icons"></i>
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="./about.html">
+                <i class="fas fa-info color-icons"></i>
+                About
+              </a>
+            </li>
+            <li>
+              <a href="./contact.html">
+                <i class="fas fa-envelope color-icons"></i>
+                Contact
+              </a>
+            </li>
+            <li>
+              <a href="./login.html">
+                <i class="fas fa-user-alt color-icons"></i>
+                Login
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="inner">
+        <section>
+          <article class="app-article">
+            <header>
+              <h1>Contact</h1>
+            </header>
+
+            <form action="POST">
+              <fieldset>
+                <legend>Your names</legend>
+                <label for="FirstName">First name</label>
+                
+                <input class="input-text"
+                  id="firstname"
+                  type="text"
+                  name="FirstName"
+                  placeholder="Enter your first name"
+                />
+
+                
+                <label for="LastName">Last name</label>
+                
+                <input class="input-text"
+                  type="text"
+                  name="LastName"
+                  placeholder="Enter your last name"
+                />
+              </fieldset>
+
+              <fieldset>
+                <legend>Contact information</legend>
+                <label for="email"
+                  >Email <span class="color-form">*</span></label
+                >
+                
+                <input class="input-text"
+                  type="email"
+                  name="Email"
+                  placeholder="Enter your email"
+                />
+                
+
+                <label for="phone">Phone</label>
+                
+                <input class="input-text"
+                  id="number"
+                  type="tel"
+                  name="number"
+                  placeholder="+47 123 45 678"
+                />
+
+                <h2>How should we contact you?</h2>
+                <label for="email">Email</label>
+                
+                <input
+                  id="email"
+                  type="radio"
+                  name="contactyou"
+                  value="Email"
+                />
+                
+                <label for="phone">Phone</label>
+                
+                <input
+                  id="phone"
+                  type="radio"
+                  name="contactyou"
+                  value="Phone"
+                />
+              </fieldset>
+
+              <fieldset>
+                <legend>How can we help you?</legend>
+                <label for="message">Message</label>
+                
+                <textarea
+                  id="message"
+                  class="input-text"
+                  name="message"
+                  cols="30"
+                  rows="10"
+                
+                ></textarea>
+              </fieldset>
+
+              <fieldset>
+                <legend>Newsletter</legend>
+                <h3>Subscribe to our newsletter</h3>
+                <label for="newsletter">
+                  yes
+                  <input type="radio" name="newsletter" value="yes" />
+                  no
+                  <input type="radio" name="newsletter" value="no" />
+                </label>
+  
+                <h5>If yes: Wich are you interrested in?</h5>
+                <label for="javascript">
+                  <input
+                    id="javascript"
+                    type="checkbox"
+                    name="javascript"
+                    checked
+                  />
+                  Javascript
+                </label>
+                <label for="css">
+                  <input id="css" type="checkbox" name="css" />
+                  CSS
+                </label>
+                <label for="html">
+                  <input id="html" type="checkbox" name="html" />
+                  HTML
+                </label>
+                
+                <input class="" type="submit" value="Submit" />
+              </form>
+              </fieldset>
+
+          </article>
+
+          <aside class="app-sidebar">sidebar</aside>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="inner">&copy;Christoffer Brendemo</div>
+    </footer>
+  </body>
+</html>

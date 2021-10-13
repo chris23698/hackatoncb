@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100%;
+        height: 200px;
+        line-height: 180px;
+        margin-bottom: 20px;
+        border: 1px solid #333;
+        text-align: center;
+
+        font-size: 16px;
+      }
+
+      /* Em: Relative to parent element, 16px * 2em */
+      .em-box p {
+        font-size: 2em;
+      }
+
+      /* Compounding */
+      .em-box p span {
+        font-size: 2em;
+      }
+
+      /* Rem */
+      .rem-box p {
+        font-size: 2rem;
+      }
+
+      .rem-box p span {
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>This is a box with font size 16px.</p>
+    </div>
+
+    <div class="box em-box">
+      <p>This is a box font <span>size</span> 2em.</p>
+    </div>
+    <hr />
+    <div>The default font size of the HTML tag is 16px</div>
+    <hr />
+    <div class="box rem-box">
+      <p>This is a box font <span>size</span> 2em.</p>
+    </div>
+  </body>
+</html>

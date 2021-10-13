@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://www.noroff.no//images/logo/favicon.png"
+      rel="shortcut icon"
+      type="image/vnd.microsoft.icon"
+    />
+    <title>Article page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Akronim&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="inner">
+        <a href="/" class="app-logo">
+          <img src="./img/logo.png" alt="CSS Tricks" />
+        </a>
+        <nav class="app-navigation">
+          <label for="hamburger-menu">
+            <span class="sr-only">Hamburger Menu</span>
+            <i class="fas fa-bars"></i>
+          </label>
+          <input id="hamburger-menu" type="checkbox" />
+          <ul class="app-navigation-drawer">
+            <li>
+              <a href="/">
+                <i class="fas fa-home color-icons"></i>
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="./about.html">
+                <i class="fas fa-info color-icons"></i>
+                About
+              </a>
+            </li>
+            <li>
+              <a href="./contact.html">
+                <i class="fas fa-envelope color-icons"></i>
+                Contact
+              </a>
+            </li>
+            <li>
+              <a href="./login.html">
+                <i class="fas fa-user-alt color-icons"></i>
+                Login
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="inner">
+        <section>
+          <article class="app-article">
+            <header>
+              <h1>CSS Basics: The Second “S” in CSS - Heading</h1>
+              <time>Geoff Graham on Feb 14, 2018 (Updated on Feb 21, 2018</time>
+            </header>
+            <p>CSS is an abbreviation for Cascading Style Sheets.</p>
+            <p>
+              While most of the discussion about CSS on the web (or even here on
+              CSS-Tricks) is centered around writing styles and how the cascade
+              affects them, what we don’t talk a whole lot about is the sheet
+              part of the language. So let’s give that lonely second “S” a
+              little bit of the spotlight and understand what we mean when we
+              say CSS is a style sheet.
+            </p>
+
+            <h2>The Sheet Contains the Styles</h2>
+            <p>
+              The cascade describes how styles interact with one another. The
+              styles make up the actual code. Then there’s the sheet that
+              contains that code. Like a sheet of paper that we write on, the
+              “sheet” of CSS is the digital file where styles are coded.
+            </p>
+            <p>
+              If we were to illustrate this, the relationship between the three
+              sort of forms a cascade:
+            </p>
+            <img src="./img/img1.jpeg" alt="Image 1" />
+            <p>
+              There can be multiple sheets all continuing multiple styles all
+              associated with one HTML document. The combination of those and
+              the processes of figuring out what styles take precedence to style
+              what elements is called the cascade (That first “C” in CSS).
+            </p>
+
+            <h2>The Sheet is a Digital File - Heading</h2>
+            <p>
+              The sheet is such a special thing that it’s been given its own
+              file extension: .css. You have the power to create these files on
+              your own. Creating a CSS file can be done in any text editor. They
+              are literally text files. Not “rich text” documents or Word
+              documents, but plain ol’ text.
+            </p>
+            <p>
+              If you’re on Mac, then you can fire up TextEdit to start writing
+              CSS. Just make sure it’s in “Plain Text” mode.
+            </p>
+            <img src="./img/img2.png" alt="Image 2" />
+
+            <p>
+              If you’re on Windows, the default Notepad app is the equivalent.
+              Heck, you can type styles in just about any plain text editor to
+              write CSS, even if that’s not what it says it was designed to do.
+            </p>
+
+            <p>
+              Whatever tool you use, the key is to save your document as a .css
+              file. This can usually be done by simply add that to your file
+              name when saving. Here’s how that looks in TextEdit:
+            </p>
+
+            <img src="./img/img3.gif" alt="Image 3" />
+            <p>
+              Seriously, the choice of which text editor to use for writing CSS
+              is totally up to you. There are many, many to choose from, but
+              here are a few popular ones:
+            </p>
+
+            <ul>
+              <li>Sublime Text</li>
+              <li>Atom</li>
+              <li>VIM</li>
+              <li>PhpStorm</li>
+              <li>Coda</li>
+              <li>Dreamweaver</li>
+            </ul>
+          </article>
+
+          <aside class="app-sidebar">
+            <figure>
+              <img src="./img/advert-1.png" alt="advert-1" />
+              <caption>
+                Sign up to mailchimp
+              </caption>
+            </figure>
+            <figure>
+              <img src="./img/advert-2.png" alt="advert-2" />
+              <caption>
+                Adds make MONEY!
+              </caption>
+            </figure>
+            <figure>
+              <img src="./img/advert-3.png" alt="advert-3" />
+              <caption>
+                Build a website, win a Tesla
+              </caption>
+            </figure>
+          </aside>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="inner">
+        <div class="column">column 1</div>
+        <div class="column">column 2</div>
+        <div class="column">column 3</div>
+        <div class="column">column 4</div>
+      </div>
+    </footer>
+  </body>
+</html>
